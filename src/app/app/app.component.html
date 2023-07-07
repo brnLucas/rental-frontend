@@ -1,0 +1,31 @@
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button matTooltip="Fechar menu lateral" (click)="isOpenDrawer = !isOpenDrawer">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Rental</span>
+  </mat-toolbar>
+</p>
+
+<mat-drawer-container class="drawer-container">
+  <mat-drawer mode="side" [opened]="isOpenDrawer">
+    <div style="display: flex; width: 259px" class="example-sidenav-content flex-column">
+      <div *ngFor="let menu of menus">
+        <button style="display: flex" class="flex-row  side-nav-menu-button gap-5"
+                [class.selected]="selectedButton == menu.title" (click)="selectedButton = menu.title" [routerLink]="menu.router"
+                mat-icon-button>
+          <mat-icon>{{menu.icon_name}}</mat-icon>
+          <span>{{menu.title}}</span>
+        </button>
+      </div>
+
+    </div>
+  </mat-drawer>
+  <mat-toolbar class="flex-auto shadow-3" style="background-color: #ffffff; width: 100%" mat-elevation-z2>
+    <span class="title">{{title}}</span>
+  </mat-toolbar>
+  <div style="padding: 20px">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
+
