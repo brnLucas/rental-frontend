@@ -10,6 +10,7 @@ import {Customer} from "../../models/customer";
 })
 export class CustomerComponent extends BaseService<Customer> implements OnInit {
   public customerList?: any;
+  public displayedColumns: string[] = ['id', 'name', 'gender', 'marital_status', 'email', 'created_at', 'active', "options"];
 
   constructor(http: HttpClient) {
     super(http, 'core');

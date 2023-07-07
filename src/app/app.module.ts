@@ -14,6 +14,8 @@ import {MatListModule} from "@angular/material/list";
 import {CustomerComponent} from './customer/customer.component';
 import {HomePageComponent} from './home-page/home-page.component';
 import {HttpClientModule} from "@angular/common/http";
+import {MatTableModule} from "@angular/material/table";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
@@ -33,6 +35,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatMenuModule,
     MatTooltipModule,
     MatListModule,
+    MatTableModule,
+    MatSlideToggleModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

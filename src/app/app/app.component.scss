@@ -1,12 +1,16 @@
-p {
+.app-title {
   margin: 0;
-  border: none;
-  background-color: #212121;
-  color: #ffffff;
   border-bottom: 2.5px solid #2b97f2;
 
   mat-icon {
     color: #2b97f2;
+  }
+
+  mat-toolbar {
+    background-color: #212121;
+  }
+  span {
+    color: white;
   }
 }
 
@@ -24,12 +28,18 @@ p {
   font-size: 12px;
   width: 100%;
   align-items: center;
+  border-radius: 0;
+
+  .mat-icon-button {
+    border-radius: 0;
+  }
 
 
   &:hover {
     background-color: #2b97f2;
-    //transform: scale(1.1);
-    //transition: transform 0.5s;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    width: 100%;
     border-radius: 0;
   }
 
